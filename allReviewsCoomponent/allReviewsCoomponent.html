@@ -1,0 +1,29 @@
+<template>
+    <lightning-card>
+        <template if:true={data}>
+            <template for:each={data} for:item="review">
+                <div key={review.Id} class="slds-box slds-var-m-around_medium">
+                    <div class="slds-grid slds-wrap slds-gutters slds-m-around_medium">
+                        <div class="slds-col slds-size_1-of-2" style="font-weight: bold;font-size: 14px;">
+                            {review.Name}
+                        </div>
+                    </div>
+                    <lightning-formatted-rich-text value={review.Comment__c}></lightning-formatted-rich-text>
+                    <div class="slds-m-top_small">
+                        <template for:each={review.RatingHtml} for:item="star">
+                            <lightning-icon key={star.value} icon-name={star.iconName} alternative-text={star.value}
+                                size="small"></lightning-icon>
+                        </template>
+                    </div>
+                </div>
+            </template>
+        </template>
+        <template if:false={data}>
+            <div class="slds-box slds-var-m-around_medium">
+                <p class="slds-text-align_center">
+                    No Reviews to display
+                </p>
+            </div>
+        </template>
+    </lightning-card>
+</template>

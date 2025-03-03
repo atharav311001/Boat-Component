@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Find a Boat">
+        <lightning-button slot="actions" label="New Boat" onclick={handleNewBoat}></lightning-button>
+        <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-center slds-m-around_medium">
+            <lightning-combobox name="boatType" value={value} options={options} onchange={handleChange}
+                class="slds-size_1-of-4" style="max-width: 180px;">
+            </lightning-combobox>
+        </div>
+    </lightning-card>
+</template>

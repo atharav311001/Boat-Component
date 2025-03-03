@@ -1,0 +1,47 @@
+<template>
+    <template if:true={showData}>
+        <lightning-card>
+            <div class="slds-box slds-var-m-around_medium">
+                <div class="slds-grid slds-wrap slds-grid_align-spread slds-grid_vertical-align-center">
+                    <!-- Icon & Boat Name -->
+                    <div class="slds-col slds-grid slds-align-items-center">
+                        <lightning-icon icon-name="utility:anchor" size="small"
+                            class="slds-m-right_small"></lightning-icon>
+                        <h2 class="slds-text-heading_medium">{Name}</h2>
+                    </div>
+                    <!-- Full Details Button -->
+                    <div class="slds-col slds-text-align_right">
+                        <lightning-button label="Full Details" variant="neutral"
+                            onclick={handleFullDetails}></lightning-button>
+                    </div>
+                </div>
+
+                <!-- Boat Details -->
+                <div class="slds-m-top_medium">
+                    <p class="slds-m-bottom_x-small"><strong>Boat Type: </strong>
+                        <a href="javascript:void(0);" class="slds-text-link"> {type}</a>
+                    </p>
+
+                    <p class="slds-m-bottom_x-small"><strong>Length: </strong>
+                        <span> {length}</span>
+                    </p>
+
+                    <div class="slds-grid slds-grid_vertical-align-center slds-m-bottom_x-small">
+                        <p class="slds-m-right_x-small"><strong>Price: </strong></p>
+                        <!-- <lightning-icon icon-name="utility:info" size="xx-small" class="slds-m-right_x-small"
+                        alternative-text="Price Info"></lightning-icon> -->
+                        <p>${price}</p>
+                    </div>
+                </div>
+            </div>
+        </lightning-card>
+    </template>
+    <template if:false={showData}>
+        <lightning-card>
+
+            <div class="slds-box slds-var-m-around_medium">
+                <p class="slds-align_absolute-center">No Boat Selected :)</p>
+            </div>
+        </lightning-card>
+    </template>
+</template>

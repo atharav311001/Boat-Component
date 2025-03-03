@@ -1,0 +1,16 @@
+<template>
+    <template if:true={showData}>
+        <lightning-card title="Current boat Loaction" icon-name="utility:location">
+            <lightning-map map-markers={mapMarkers} zoom-level="3"></lightning-map>
+        </lightning-card>
+    </template>
+    <template if:false={showData}>
+        <lightning-card>
+            <div class="slds-box slds-var-m-around_medium">
+                <p class="slds-text-align_center">
+                    No Boat data to display
+                </p>
+            </div>
+        </lightning-card>
+    </template>
+</template>
