@@ -55,8 +55,7 @@ Below is a list of key components included in this repository:
 
 ## Screenshot
 Below is an image of the Boat component in action:
-![image](https://github.com/user-attachments/assets/772f9b73-3f02-4390-9360-b598091da7f9)
-
+![image](https://github.com/user-attachments/assets/466a8400-d981-4fc0-a875-ca0bed57ed0a)
 
 ## Contribution
 Feel free to fork this repository and contribute enhancements or bug fixes via pull requests.
