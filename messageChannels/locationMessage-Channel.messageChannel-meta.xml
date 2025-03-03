@@ -1,0 +1,8 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<LightningMessageChannel xmlns="https://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Location</masterLabel>
+    <isExposed>True</isExposed>
+    <lightningMessageFields>
+        <fieldName>locationData</fieldName> 
+    </lightningMessageFields>
+</LightningMessageChannel>
